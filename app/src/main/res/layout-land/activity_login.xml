@@ -25,7 +25,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/logo"
             android:layout_width="match_parent"
-            android:layout_height="92dp"
+            android:layout_height="100dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -40,7 +40,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_dhis_white" />
+                app:srcCompat="@drawable/top" />
 
             <TextView
                 android:id="@+id/app_build_info"
@@ -54,7 +54,7 @@
                 android:textSize="9sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:text="v2.4.X : 2020-09-03 : whatever" />
+                tools:text="CACUM v1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -64,20 +64,28 @@
             android:layout_height="0dp"
             android:background="@color/white"
             android:gravity="center"
-            android:paddingStart="100dp"
-            android:paddingTop="18dp"
-            android:paddingEnd="100dp"
+            android:paddingStart="16dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="16dp"
             app:clipCorners="@{16}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/logo">
 
+            <ImageView
+                android:id="@+id/user"
+                android:layout_width="300dp"
+                android:layout_height="120dp"
+                android:src="@drawable/log"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/serverUrlContainer"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxWidth="450dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="120dp"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageButton
@@ -105,6 +113,7 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
                     android:hint="@string/url_hint"
+                    android:textStyle="bold"
                     android:textColorHint="@color/text_black_808"
                     android:theme="@style/loginInputText"
                     app:layout_constraintEnd_toStartOf="@id/clearUrl"
@@ -131,11 +140,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/userNameContainer"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxWidth="450dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/serverUrlContainer">
 
                 <ImageView
@@ -177,6 +183,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:imeOptions="actionNext"
+                        android:textStyle="bold"
                         android:inputType="textPersonName"
                         android:onTextChanged="@{loginModel::onUserChanged}"
                         android:textColor="@color/text_black_333"
@@ -188,11 +195,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/passContainer"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxWidth="450dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/userNameContainer">
 
 
@@ -236,6 +240,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:imeOptions="actionDone"
+                        android:textStyle="bold"
                         android:inputType="textPassword"
                         android:onTextChanged="@{loginModel::onPassChanged}"
                         android:textColor="@color/text_black_333"
@@ -281,13 +286,12 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/loginButtons"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:maxWidth="450dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/login"
@@ -296,7 +300,7 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{()-> presenter.onButtonClick()}"
                 android:text="@string/log_in_button"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/manageAccounts"
@@ -305,9 +309,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik_regular"
                 android:layout_marginTop="6dp"
+                android:text="@string/manage_accounts"
                 android:onClick="@{() -> presenter.onManageAccountClicked()}"
                 android:visibility="@{presenter.displayManageAccount() ? View.VISIBLE : View.GONE }"
-                android:text="@string/manage_accounts"
                 app:layout_constraintTop_toBottomOf="@id/login"
                 tools:text="Manage Accounts" />
 
@@ -324,7 +328,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/logout"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="10dp"
@@ -338,7 +342,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/unlock"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
@@ -357,8 +361,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@color/white"
-            android:gravity="center"
             app:clipCorners="@{16}"
+            android:gravity="center"
             android:paddingStart="40dp"
             android:paddingEnd="40dp"
             android:visibility="gone"
@@ -384,9 +388,11 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
         <include
             android:id="@+id/pin_layout"
             layout="@layout/layout_pin"
             android:visibility="gone" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
