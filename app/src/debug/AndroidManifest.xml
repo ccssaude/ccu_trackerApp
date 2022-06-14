@@ -17,7 +17,6 @@
     <!--<uses-permission android:name="android.permission.NFC"/>-->
     <!--<uses-feature android:name="android.hardware.nfc" />-->
 
-
     <uses-feature
         android:name="android.hardware.sensor.accelerometer"
         android:required="false" />
