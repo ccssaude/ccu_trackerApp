@@ -48,7 +48,7 @@ class SyncPresenterImpl(
     override fun syncAndDownloadEvents() {
         val (eventLimit, limitByOU, limitByProgram) = getDownloadLimits()
 
-        Completable.fromObservable(d2.eventModule().events().upload())
+        Completable.fromObservable(d2.trackedEntityModule().trackedEntityInstances().upload())
             .andThen(
                 Completable.fromObservable(
                     d2.eventModule()

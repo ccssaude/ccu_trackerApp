@@ -50,7 +50,6 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginTop="15dp"
-                    android:text="@string/about_more"
                     android:textColorLink="?colorPrimary"
                     app:layout_constraintTop_toBottomOf="@id/appSDK" />
 
@@ -60,7 +59,6 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginTop="15dp"
-                    android:text="@string/open_privacy_policy"
                     android:textColorLink="?colorPrimary"
                     app:layout_constraintTop_toBottomOf="@+id/about_user"
                     tools:layout_editor_absoluteX="-2dp" />
@@ -88,7 +86,6 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginTop="15dp"
-                    android:text="@string/about_git"
                     android:textColorLink="?colorPrimary"
                     app:layout_constraintTop_toBottomOf="@id/privacyPolicy"
                     tools:layout_editor_absoluteX="3dp" />
@@ -99,10 +96,8 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginTop="15dp"
-                    android:text="@string/about_dev"
                     android:textColorLink="?colorPrimary"
                     app:layout_constraintTop_toBottomOf="@id/about_git" />
-
 
                 <TextView
                     android:id="@+id/about_contact"
@@ -110,7 +105,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:text="@string/about_contact"
                     android:textColorLink="?colorPrimary"
                     app:layout_constraintTop_toBottomOf="@id/about_dev" />
 

@@ -64,6 +64,7 @@ fun View.hideDialItem(onAnimationEnd: () -> Unit = {}) {
         })
         .alpha(0f)
         .start()
+
 }
 
 @BindingAdapter("is_dial_item")

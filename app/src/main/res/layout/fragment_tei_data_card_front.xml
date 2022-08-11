@@ -57,7 +57,6 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent=".5" />
 
-
         <LinearLayout
             android:id="@+id/shareContainer"
             style="@style/ButtonRoundedGrey"
@@ -71,12 +70,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@id/divider">
-
+            
             <ImageView
                 android:id="@+id/shareIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_share"
+                app:srcCompat="@drawable/ic_add_item"
                 app:tint="@color/white" />
 
             <TextView
@@ -84,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:fontFamily="@font/rubik_medium"
-                android:text="@string/share"
+                android:text="@string/schedule_consult"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="12sp" />

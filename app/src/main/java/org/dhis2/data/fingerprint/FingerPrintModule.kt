@@ -27,6 +27,6 @@ object FingerPrintModule {
     @JvmStatic
     @Provides
     fun provideFingerPrintMapper(): FingerPrintMapper {
-        return FingerPrintMapper()
+          return FingerPrintMapper()
     }
 }

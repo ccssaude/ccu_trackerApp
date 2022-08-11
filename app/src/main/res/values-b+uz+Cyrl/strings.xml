@@ -1,7 +1,7 @@
 <resources>
     <!--GENERAL-->
-    <string name="app_name">CCU Tracker</string>
-    <string name="logo_text">CCU Tracker</string>
+    <string name="app_name">Tracker ATS</string>
+    <string name="logo_text">Tracker ATS</string>
     <string name="logo_number">2</string>
     <!-- Warnings and error messages -->
     <string name="error">Хатолик</string>

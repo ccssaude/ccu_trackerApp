@@ -181,6 +181,7 @@
     <string name="follow_up_disabled">Follow up disabled</string>
     <string name="deactivate">Deactivate</string>
     <string name="program_not_allow_events">This program does not allow more events</string>
+    <string name="consultas">Agendar Consulta</string>
 
     <!--DONE TASKS-->
     <string name="events">events</string>
@@ -340,6 +341,7 @@
     <string name="clear_all">clear selection</string>
     <string name="empty_program_list">There is no information for the filters selected. Please try changing them.</string>
     <string name="share">Share</string>
+    <string name="schedule_consult">Agendar consulta</string>
     <string name="share_qr">Share QR</string>
     <string name="teiType_search_online">Search by type is not possible for online search.\nPlease select a program from the list.</string>
     <string name="max">Max</string>
