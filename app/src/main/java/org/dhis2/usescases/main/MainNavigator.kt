@@ -16,7 +16,7 @@ import org.dhis2.usescases.qrReader.QrReaderFragment
 import org.dhis2.usescases.settings.SyncManagerFragment
 import org.dhis2.usescases.troubleshooting.TroubleshootingFragment
 import org.dhis2.utils.customviews.navigationbar.NavigationBottomBar
-//&Gt5Ro!"sN)B[wTg D4/\/Il$on &Gt5Ro!"sN)B[wTg
+//&Gt5Ro!"sN)B[wTg
 class MainNavigator(
     private val fragmentManager: FragmentManager,
     private val onTransitionStart: () -> Unit,
