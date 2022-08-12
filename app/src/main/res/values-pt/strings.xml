@@ -160,7 +160,7 @@
     <string name="enrolling_ou">Inscrição UO:</string>
     <string name="follow_up">Acompanhamento</string>
     <string name="follow_up_enabled">Paciente em seguimento !</string>
-    <string name="follow_up_disabled">Paciente em seguimento !</string>
+    <string name="follow_up_disabled">Paciente sem seguimento !</string>
     <string name="deactivate">Desactivar</string>
     <string name="program_not_allow_events">Este programa não permite mais eventos</string>
 
