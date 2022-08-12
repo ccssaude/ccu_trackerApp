@@ -10,7 +10,7 @@ import android.webkit.WebViewClient;
 public class AgendaActivity extends AppCompatActivity {
     private WebView webView;
 
-//    @Override
+  @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agenda);
@@ -21,7 +21,7 @@ public class AgendaActivity extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
     }
-   // @Override
+    @Override
     public void onBackPressed() {
         if (webView.canGoBack()) {
             webView.goBack();
