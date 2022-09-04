@@ -19,10 +19,10 @@ public class AgendaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agenda);
         webView = (WebView) findViewById(R.id.webview);
-        mProgressbar = findViewById(R.id.progressBar);
+//        mProgressbar = findViewById(R.id.progressBar);
         mProgressbar.setMax(100);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://gregarious-alpaca-c2f3d8.netlify.app/");
+        webView.loadUrl("https://roco1.netlify.app/");
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
